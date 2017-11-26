@@ -114,7 +114,9 @@ gulp.task('browser-sync', function() {
 	if (isBuild) {
 		return;
 	}
-	browserSync.init(serverConfig);
+	setTimeout(() => {
+		browserSync.init(serverConfig);
+	}, 100);
 });
 
 // WATCH

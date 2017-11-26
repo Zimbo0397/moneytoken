@@ -1,7 +1,7 @@
 {
-  "name": "---",
+  "name": "moneytoken",
   "version": "0.0.1",
-  "description": "---",
+  "description": "Landing page",
   "main": "gulpfile.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -28,15 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/---/---.git"
+    "url": "git+https://github.com/AlexeyPogorelov/moneytoken.git"
   },
   "keywords": [],
   "author": "---",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/---/---/issues"
+    "url": "https://github.com/AlexeyPogorelov/moneytoken/issues"
   },
-  "homepage": "https://github.com/---/---#readme",
+  "homepage": "https://github.com/AlexeyPogorelov/moneytoken#readme",
   "dependencies": {
     "font-awesome": "^4.7.0"
   }
