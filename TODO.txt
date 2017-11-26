@@ -1,0 +1,7 @@
+- fill info in README.md
+- change lang attribute in HTML tag (layout.pug)
+- generate favicon
+- compress images https://compressor.io/
+- fill open graph meta tags (partials/head.pug)
+- fill or remove keywords & description meta tags (partials/head.pug)
+- remove DEV block in main.sass
