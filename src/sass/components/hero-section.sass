@@ -1,0 +1,17 @@
+@mixin hero-section
+	font-size: 4rem
+
+@mixin hero-section__button
+	background: red
+
+@mixin hero-section__button_active
+	background: blue
+
+.hero-section
+	@include hero-section 
+
+	&__button
+		@include hero-section__button
+
+		&_active
+			@include hero-section__button_active
