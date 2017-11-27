@@ -1,5 +1,27 @@
 //- .preloader
 	//- .after
-ul.list-inline
-	li(class= navigation == 'index' ? 'active' : '')
-		a(href="index.html") index
+.navigation-panel
+	.main-logo
+		img(src="#", alt="Money Token")
+
+	.main-navigation
+		.main-navigation__item.main-navigation__item_active
+			a.main-navigation__link(href="#whitepaper") Whitepaper
+		.main-navigation__item
+			a.main-navigation__link(href="#howitworks") How it works
+		.main-navigation__item
+			a.main-navigation__link(href="#token") Token
+		.main-navigation__item
+			a.main-navigation__link(href="#lucy") Lucy
+		.main-navigation__item
+			a.main-navigation__link(href="#team") Team
+		.main-navigation__item
+			a.main-navigation__link(href="#faq") FAQ
+		.main-navigation__item
+			a.main-navigation__link(href="#contact") Contact
+
+	.language-switcher
+		.language-switcher__item.language-switcher__item_active
+			button.language-switcher__button EN
+		.language-switcher__item
+			button.language-switcher__button RU
