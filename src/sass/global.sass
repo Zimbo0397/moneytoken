@@ -27,7 +27,8 @@ section
 a
 	border: none
 	outline: none
-	// color: $main-color
+	text-decoration: none
+	color: $main-color
 
 p
 
@@ -119,12 +120,20 @@ input[type='number']
 .container
 	overflow: hidden
 	margin: 0 auto
-	width: 80%
+	max-width: 1440px
+	width: 100%
 
 	@media #{$media-sm}
 		padding-left: 1rem
 		padding-right: 1rem
 		width: 100%
+
+.full-page
+	min-height: 100vh
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	flex-direction: row
 
 .hidden
 	display: none !important

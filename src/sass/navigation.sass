@@ -1,3 +1,115 @@
 //----------------------------------
 // Default navbar
 //----------------------------------
+@mixin navigation-panel
+    padding-right: 10rem
+    padding-left: 21.6rem
+    position: fixed
+    width: 100%
+
+@mixin main-logo
+    display: inline-block
+    width: 34.2rem
+    position: relative
+    top: 4.5rem
+    margin-right: 7rem
+    vertical-align: top
+
+@mixin main-navigation
+    display: inline-block
+    margin-top: 2.6rem
+
+@mixin main-navigation__item
+    display: inline-block
+    padding: 0 1.55rem
+
+@mixin main-navigation__itemafter
+    content: ''
+    width: 100%
+    height: 0.5rem
+    background: #43a584
+    position: absolute
+    top: -2.5rem
+    left: 0
+
+@mixin main-navigation__link
+    text-transform: uppercase
+    color: #010101
+    font-weight: 500
+    line-height: 2.2rem
+    display: inline-block
+    font-size: 1.3rem
+    font-weight: 600
+
+@mixin main-navigation__link_active
+    color: #43a584  
+
+@mixin language-switcher
+    position: absolute
+    top: 2.5rem
+    right: 6.2rem
+    max-height: 3.9rem
+    border: 1px solid #1f8fa0
+    overflow: hidden
+
+@mixin language-switcher-hover
+    overflow: initial
+    max-height: 100%
+
+@mixin language-switcher__button
+    padding: 0 1.1rem
+    background: transparent
+    line-height: 3.6rem
+    vertical-align: top
+    color: #1f8fa0
+    font-weight: 500
+    font-size: 1.2rem
+    border-radius: 0
+    outline: none
+    border: none
+
+@mixin language-switcher__button_active
+    background: #1f8fa0
+    color: #fff
+
+.navigation-panel
+    @include navigation-panel
+
+.main-logo
+    @include main-logo
+
+.main-navigation
+    @include main-navigation
+
+    &__item
+        @include main-navigation__item
+
+        &_active,
+        &:hover
+            position: relative
+
+            &:after
+                @include main-navigation__itemafter
+
+            .main-navigation__link
+                @include main-navigation__link_active 
+
+
+    &__link
+        @include main-navigation__link
+
+
+
+.language-switcher
+    @include language-switcher
+
+    &__button
+        @include language-switcher__button
+
+        &_active,
+        &:hover
+            @include language-switcher__button_active
+
+    &:hover
+        @include language-switcher-hover
+        

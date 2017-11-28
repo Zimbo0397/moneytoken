@@ -1,23 +1,48 @@
 // BUTTONS
-button, .app-button, input[type="button"]
+.app-button
 	border: none
 	background: none
 	cursor: pointer
 	display: inline-block
-	background-color: $main-color
-	padding: 0.6em 1.2em
-	line-height: 1em
+	padding: 0 1.8em
+	line-height: 3.2em
 	transition: background 100ms
 	white-space: nowrap
 	text-overflow: ellipsis
 	overflow: hidden
+	border-radius: 3px
+	letter-spacing: -0.04rem
+	font-size: 1.6rem
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: -0.11rem
 
-	&.focus, &:focus, &:hover, &:active
-		text-decoration: none
-		background-color: $main-color-hover
+	&_primer
+		background-image: linear-gradient(to right, #009795, #00a97c)
+		min-width: 14.4rem
+		text-align: center
 
-	&:active, &:focus
-		outline: none
+	&_transparent
+		background: transparent
+		color: #1f8fa0
+
+	&_image
+		padding-right: 3.9rem
+		background-position: 100% 0.5rem
+		background-repeat: no-repeat
+
+	&_image-pdf
+		background-image: url('../img/icons/button_pdf.png')
+
+	&_image-github
+		background-image: url('../img/icons/button_github.png')
+
+	// &.focus, &:focus, &:hover, &:active
+	// 	text-decoration: none
+	// 	background-color: $main-color-hover
+
+	// &:active, &:focus
+	// 	outline: none
 // END BUTTONS
 
 // FORM
