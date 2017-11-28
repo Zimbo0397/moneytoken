@@ -1,3 +1,7 @@
+@mixin hero-section__bg
+	position: relative
+	left: -15rem
+
 @mixin hero-section__sub-header
 	font-size: 3.7rem
 	font-weight: 600
@@ -20,9 +24,8 @@
 @mixin hero-section__button-group
 	margin-bottom: 1.4rem
 
-
-
-
+.hero-section__bg
+	@include hero-section__bg
 
 .hero-section__sub-header
 	@include hero-section__sub-header

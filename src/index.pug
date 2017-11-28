@@ -5,9 +5,11 @@ block vars
 	- var navigation = "index"
 
 block content
-	.container
 		
-	.hero-section.full-page
+	.hero-section.app-full-page
+		.app-page-bg
+			.hero-section__bg
+				img(src="img/bg/hero-bg.png", alt="")
 		.container
 			.hero-section__sub-header.
 				MoneyToken
@@ -19,9 +21,52 @@ block content
 				a.hero-section__button.app-button.app-button_primer(href="#applyforpresale") Appy for pre sale
 				a.hero-section__button.app-button.app-button_primer(href="#signin") Sign in
 			.hero-section__button-group
-				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image-pdf(href="#whitepaper") Whitepaper
-				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image-pdf(href="#onepager") Onepager
-				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image-github(href="#github") Github
+				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image_pdf(href="#whitepaper") Whitepaper
+				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image_pdf(href="#onepager") Onepager
+				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image_github(href="#github") Github
+
+	.join-section.app-full-page
+		.app-page-bg
+			.join-section__bg
+				img(src="img/bg/join-section_bg.jpg", alt="")
+		.container
+			.join-section__content
+				.join-section__main-header.
+					Join us
+				ul.join-section__socials-list
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_telegram.png", alt="")
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_m.png", alt="")
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_facebook.png", alt="")
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_twitter.png", alt="")
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_bilb.png", alt="")
+					li.join-section__socials-item
+						a(href="#", title="title").join-section__socials-link
+							img(src="img/icons/socials-list_talk.png", alt="")
+
+				
+				a(href="info@moneytoken.com", title="title").join-section__info info@moneytoken.com
+
+				.join-section__sign-up
+					.join-section__form-group
+						label(for="#34").join-section__form-label Sign up for the MoneyToken news:
+						form(action="").join-section__form
+							input(type="text" id="34", placeholder="Enter your e-mail").join-section__form-input
+							button.join-section__send-btn
+						
+				.join-section__footer
+					.join-section__limited MONEY TOKEN LIMITED
+					a(href="#", title="title").join-section__terms Terms and conditions
+				
 
 	.intro-video-section
 		.intro-video-section__video-holder

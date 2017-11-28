@@ -96,6 +96,14 @@ $grid-gap: 2rem
 	padding-bottom: $grid-gap
 	min-height: 100vh
 
+%inline-layout
+	font-size: 0
+	letter-spacing: 0
+	& > *
+		display: inline-block
+		vertical-align: top
+		font: $font
+
 %col
 	&
 		margin: 0 (-$grid-gap)

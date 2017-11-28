@@ -6,6 +6,7 @@
     padding-left: 21.6rem
     position: fixed
     width: 100%
+    z-index: 1
 
 @mixin main-logo
     display: inline-block
@@ -15,6 +16,11 @@
     margin-right: 7rem
     vertical-align: top
 
+@mixin logo-page
+    position: absolute
+    top: 1rem
+    left: 3.9rem
+
 @mixin main-navigation
     display: inline-block
     margin-top: 2.6rem
@@ -23,14 +29,19 @@
     display: inline-block
     padding: 0 1.55rem
 
-@mixin main-navigation__itemafter
-    content: ''
-    width: 100%
-    height: 0.5rem
-    background: #43a584
-    position: absolute
-    top: -2.5rem
-    left: 0
+    &_active,
+    &:hover
+        position: relative
+
+        &:after
+            content: ''
+            width: 100%
+            height: 0.5rem
+            background: #43a584
+            position: absolute
+            top: -2.5rem
+            left: 0
+
 
 @mixin main-navigation__link
     text-transform: uppercase
@@ -75,6 +86,9 @@
 .navigation-panel
     @include navigation-panel
 
+.logo-page
+    @include logo-page
+
 .main-logo
     @include main-logo
 
@@ -84,20 +98,12 @@
     &__item
         @include main-navigation__item
 
-        &_active,
-        &:hover
-            position: relative
-
-            &:after
-                @include main-navigation__itemafter
-
-            .main-navigation__link
-                @include main-navigation__link_active 
-
-
     &__link
         @include main-navigation__link
 
+    &__item_active &__link,
+    &__item:hover &__link
+        @include main-navigation__link_active 
 
 
 .language-switcher

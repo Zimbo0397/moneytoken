@@ -1,0 +1,153 @@
+@mixin join-section__bg
+	position: relative
+
+@mixin join-section__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+@mixin join-section__main-header
+    font-size: 9.14rem
+    font-weight: 600
+    letter-spacing: -0.21rem
+    line-height: 8.3rem
+    margin-bottom: 5.8rem
+
+@mixin join-section__socials-list
+@mixin join-section__socials-item
+    margin: 0 2.4rem
+    max-width: 4.2rem
+    min-width: 3.8rem
+    vertical-align: middle
+    text-align: center
+
+@mixin join-section__info
+    margin-top: 5.8rem
+    text-decoration: underline
+    font-weight: 400
+    display: inline-block
+    color: #1f8fa0
+    letter-spacing: -0.08rem
+    font-size: 3rem
+
+@mixin join-section__sign-up
+    margin-top: 10rem
+
+@mixin join-section__form-group
+        width: 32rem
+
+@mixin join-section__form-label
+    display: block
+    font-size: 1.8rem
+    letter-spacing: -0.04rem
+    text-align: center
+
+@mixin join-section__form-input
+    width: 100%
+    border: 2px solid #1f8fa0
+    font-size: 1.6rem
+    padding: 1.3rem 1.8rem
+    border-radius: 0.4rem
+    margin-top: 0rem
+    padding-right: 4rem
+
+    &::-webkit-input-placeholder
+        color: #666666
+        font-size: 1.6rem
+        letter-spacing: -0.04rem
+
+    &::-moz-placeholder
+        color: #666666
+        font-size: 1.6rem
+        letter-spacing: -0.04rem
+
+    &:-ms-input-placeholder
+        color: #666666
+        font-size: 1.6rem
+        letter-spacing: -0.04rem
+
+    &:-moz-placeholder
+        color: #666666
+        font-size: 1.6rem
+        letter-spacing: -0.04rem
+
+@mixin join-section__footer
+    margin-top: 7.2rem
+    text-align: center
+
+@mixin join-section__limited
+    font-size: 1.5rem
+    letter-spacing: -0.04rem
+
+@mixin join-section__terms
+    font-size: 1.74rem
+    letter-spacing: -0.04rem
+    color: #1f8fa0
+    text-decoration: underline
+    display: inline-block
+    
+@mixin join-section__form
+    position: relative
+
+@mixin join-section__send-btn
+    position: absolute
+    top: 0
+    right: 0.1px
+    height: 5.3rem
+    width: 5rem
+    background-image: url(../img/icons/send-mail_icon.png)
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-color: transparent
+    border: none
+    outline: none
+    cursor: pointer
+
+.join-section
+
+    &__content
+        @include join-section__content
+
+    &__bg
+        @include join-section__bg
+
+    &__main-header
+        @include join-section__main-header
+
+
+    &__socials-list
+        @extend %inline-layout
+
+    &__socials-item
+        @include join-section__socials-item
+
+    &__info
+        @include join-section__info
+
+    &__sign-up
+        @include join-section__sign-up
+
+    &__form-group
+        @include join-section__form-group
+
+    &__form-label
+        @include join-section__form-label
+
+    &__form-input
+        @include join-section__form-input
+
+    &__footer
+        @include join-section__footer
+
+    &__limited
+        @include join-section__limited
+
+    &__terms
+        @include join-section__terms
+
+    &__form
+        @include join-section__form
+
+    &__send-btn
+        @include join-section__send-btn
