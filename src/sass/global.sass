@@ -131,7 +131,7 @@ input[type='number']
 		width: 100%
 
 .app-full-page
-	min-height: 100vh
+	height: 100vh
 	display: flex
 	align-items: center
 	justify-content: flex-start
@@ -154,6 +154,12 @@ input[type='number']
 	align-items: center
 	justify-content: flex-start
 	flex-direction: row
+	overflow: hidden
+
+	.bg-image
+		height: 100%
+		width: 100%
+		object-fit: cover
 
 .hidden
 	display: none !important

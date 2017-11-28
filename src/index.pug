@@ -9,7 +9,7 @@ block content
 	.hero-section.app-full-page
 		.app-page-bg
 			.hero-section__bg
-				img(src="img/bg/hero-bg.png", alt="")
+				img(src="img/bg/hero-bg.png", alt="").bg-image
 		.container
 			.hero-section__sub-header.
 				MoneyToken
@@ -25,10 +25,18 @@ block content
 				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image_pdf(href="#onepager") Onepager
 				a.hero-section__button.hero-section__button_image.app-button.app-button_transparent.app-button_image.app-button_image_github(href="#github") Github
 
+	.intro-video-section.app-full-page
+		.container
+			.intro-video-section__video-holder
+				.intro-video-section__video
+					video#main_vid(poster='img/content/video-poster.jpg')
+						source(src='video/money_token.mp4', type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+				.intro-video-section__button.app-button.app-button_primer Play Video
+
 	.amanda-section.section_white.app-full-page
 		.app-page-bg
 			.amanda-section__bg
-				img(src="img/bg/amanda-section_bg.jpg", alt="")
+				img(src="img/bg/amanda-section_bg.jpg", alt="").bg-image
 		.container
 			.amanda-section__header Who is 
 				span.amanda-section__header-color Amanda
@@ -39,7 +47,7 @@ block content
 	.join-section.app-full-page
 		.app-page-bg
 			.join-section__bg
-				img(src="img/bg/join-section_bg.jpg", alt="")
+				img(src="img/bg/join-section_bg.jpg", alt="").bg-image
 		.container
 			.join-section__content
 				.join-section__main-header.
@@ -64,8 +72,7 @@ block content
 						a(href="#", title="title").join-section__socials-link
 							img(src="img/icons/socials-list_talk.png", alt="")
 
-				
-					a(href="info@moneytoken.com", title="title").join-section__info info@moneytoken.com
+				a(href="info@moneytoken.com", title="title").join-section__info info@moneytoken.com
 
 				.join-section__sign-up
 					.join-section__form-group
@@ -77,9 +84,3 @@ block content
 				.join-section__footer
 					.join-section__limited MONEY TOKEN LIMITED
 					a(href="#", title="title").join-section__terms Terms and conditions
-				
-	.intro-video-section
-		.intro-video-section__video-holder
-			.intro-video-section__video
-				video(src="#")
-			.intro-video-section__button

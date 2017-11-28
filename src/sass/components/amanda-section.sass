@@ -28,15 +28,19 @@
     margin-top: 3.7rem
     min-width: 28rem
 
+.amanda-section
 
-.amanda-section__header
-    @include amanda-section__header
+    &__bg
+        @extend %section-bg
 
-.amanda-section__header-color
-    @include amanda-section__header-color
+    &__header
+        @include amanda-section__header
 
-.amanda-section__text
-    @include amanda-section__text
+    &__header-color
+        @include amanda-section__header-color
 
-.amanda-section__explote-btn
-    @include amanda-section__explote-btn
+    &__text
+        @include amanda-section__text
+
+    &__explote-btn
+        @include amanda-section__explote-btn

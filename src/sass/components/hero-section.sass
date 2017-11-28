@@ -1,5 +1,4 @@
 @mixin hero-section__bg
-	position: relative
 	left: -15rem
 
 @mixin hero-section__sub-header
@@ -25,6 +24,7 @@
 	margin-bottom: 1.4rem
 
 .hero-section__bg
+	@extend %section-bg
 	@include hero-section__bg
 
 .hero-section__sub-header
