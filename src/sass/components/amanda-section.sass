@@ -1,0 +1,42 @@
+@mixin amanda-section__header
+    font-size: 5.4rem
+    font-weight: 600
+    line-height: 6rem
+    padding-bottom: 4rem
+    position: relative
+    margin-bottom: 3.7rem
+
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0.2rem
+        left: -0.1rem
+        height: 0.6rem
+        width: 9.7rem
+        background-image: linear-gradient(to right, #1f8fa0, #63b86c 83%)
+
+@mixin amanda-section__header-color
+    color: #4caa7e
+
+@mixin amanda-section__text
+    font-size: 3.5rem
+    line-height: 1.4em
+    max-width: 72.8rem
+    font-weight: 400
+
+@mixin amanda-section__explote-btn
+    margin-top: 3.7rem
+    min-width: 28rem
+
+
+.amanda-section__header
+    @include amanda-section__header
+
+.amanda-section__header-color
+    @include amanda-section__header-color
+
+.amanda-section__text
+    @include amanda-section__text
+
+.amanda-section__explote-btn
+    @include amanda-section__explote-btn
