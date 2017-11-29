@@ -1,0 +1,37 @@
+@mixin slider-section__image
+    height: 43rem
+    max-width: 97rem
+    margin: auto
+    display: flex
+    align-items: center
+
+    img
+        object-fit: initial
+        height: auto
+
+@mixin slider-section__title
+    font-size: 5.21rem
+    font-weight: 600
+    line-height: 1.67
+    letter-spacing: -0.13rem
+    margin-bottom: 4rem
+
+@mixin slider-section__title-small
+    font-size: 1.6rem
+    line-height: 1.5
+    letter-spacing: -0.04rem
+    text-align: left
+    color: #333333
+    font-weight: 400
+
+
+
+.slider-section
+    &__image
+        @include slider-section__image
+
+    &__title
+        @include slider-section__title
+
+    &__title-small
+        @include slider-section__title-small

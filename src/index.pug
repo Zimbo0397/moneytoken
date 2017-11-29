@@ -5,7 +5,7 @@ block vars
 	- var navigation = "index"
 
 block content
-		
+	.blackshadow
 	.hero-section.app-full-page
 		.app-page-bg
 			.hero-section__bg
@@ -48,6 +48,18 @@ block content
 					img(src="img/content/credit-cards.png", alt="")
 				a(href="#", title="title").cash-section__button.app-button.app-button_primer Preorder	
 
+	.slider-section.app-full-page
+		.container
+			.slider-section__title MoneyToken
+				span.slider-section__title-small —  platform for short term loans in stable currencies with high growth crypto assets as a collateral.
+			.slider-section__slider(data-js="slider").owl-carousel.owl-theme
+				.item
+					.image-holder.slider-section__image
+						img(src="img/content/slider-image-1.svg", alt="")
+				.item
+					.image-holder.slider-section__image
+						img(src="img/content/slider-image-2.svg", alt="")
+
 	.interested-section.app-full-page
 		.app-page-bg.app-page-bg_direction_end
 			.interested-section__bg
@@ -83,6 +95,7 @@ block content
 						.interested-section__block-text
 							.interested-section__item-title Small/Medium exchanges	
 							.interested-section__item-text Meet extra cash needs while hedging exchange risks and therefore provide #[br] better service for new and existing clients
+	
 	.amanda-section.section_white.app-full-page
 		.app-page-bg
 			.amanda-section__bg

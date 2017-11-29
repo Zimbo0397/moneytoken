@@ -84,15 +84,15 @@ var APP;
                         });
                     })();
                 },
-                // slider_big: function slider_big(_self) {
-                //     _self.owlCarousel({
-                //         items: 1,
-                //         loop: true,
-                //         margin: 10,
-                //         nav: true,
-                //         navText: ''
-                //     });
-                // },
+                slider: function slider(_self) {
+                    _self.owlCarousel({
+                        items: 1,
+                        loop: true,
+                        margin: 10,
+                        nav: true,
+                        navText: ''
+                    });
+                },
                 body_overflow: function () {
                     var $body = $('body');
                     var isOpened = false;
