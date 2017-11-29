@@ -1,0 +1,124 @@
+@mixin team-section__bg
+    position: relative
+    pointer-events: none
+    width: 100%
+
+@mixin team-section__title
+    margin-bottom: 5.4rem
+
+@mixin team-section__list
+    max-width: 143rem
+    margin: 0 auto
+
+@mixin team-section__person
+    text-align: center
+    margin-bottom: 4.4rem
+    position: relative
+
+@mixin team-section__person-plate
+    position: absolute
+    top: -3.9rem
+    left: 50%
+    width: 111.5%
+    min-height: 100%
+    z-index: 2
+    background: white
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2)
+    display: block
+    transform: translateX(-50%)
+    padding: 2.3rem 3.4rem
+    padding-bottom: 8.7rem
+    background-image: url(../img/icons/kedin__icon.svg)
+    background-repeat: no-repeat
+    background-size: 5rem
+    background-position: 50% 92.2%
+    opacity: 0
+    transition: opacity 0.2s linear
+
+    &:hover
+        opacity: 1
+        transition: opacity 0.2s linear
+        z-index: 3
+
+@mixin team-section__plate-title
+    font-size: 2rem
+    font-weight: 600
+    line-height: 1.4em
+    letter-spacing: -0.05rem
+    text-align: center
+    color: #1f8fa0
+    margin-bottom: 0.2rem
+
+@mixin team-section__plate-position
+    font-size: 1.4rem
+    line-height: 2.14
+    letter-spacing: -0.04rem
+    color: #666666
+    margin-bottom: 1.6rem
+
+@mixin team-section__plate-description
+    font-size: 1.43rem
+    letter-spacing: -0.03rem
+    text-align: left
+    color: #333333
+    line-height: 1.9rem
+
+@mixin team-section__person-image
+    border-radius: 50%
+    height: 17rem
+    width: 17rem
+    margin: 0 auto
+    margin-bottom: 0.8rem
+
+@mixin team-section__person-name
+    font-size: 2rem
+    font-weight: 600
+    line-height: 1.4
+    letter-spacing: -0.05rem
+    color: #000000
+    margin-bottom: 1rem
+
+@mixin team-section__person-position
+    font-size: 1.4rem
+    line-height: 1.2em
+    letter-spacing: -0.04rem
+    text-align: center
+    color: #666666
+    max-width: 19rem
+    margin: 0 auto
+
+
+.team-section
+    
+    &__title
+        @extend %page-title
+        @include team-section__title
+
+    &__list
+        @extend %inline-layout
+        @extend %col-5
+        @include team-section__list
+
+    &__person
+        @include team-section__person
+
+    &__person-plate
+        @include team-section__person-plate
+
+    &__plate-title
+        @include team-section__plate-title
+
+    &__plate-position
+        @include team-section__plate-position
+
+    &__plate-description
+        @include team-section__plate-description
+
+    &__person-image
+        @include team-section__person-image
+
+    &__person-naem
+        @include team-section__person-name
+
+    &__person-position 
+        @include team-section__person-position
