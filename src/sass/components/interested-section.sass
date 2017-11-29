@@ -1,0 +1,95 @@
+@mixin interested-section
+    background-color: #fcfcfc
+
+@mixin interested-section__bg
+    position: relative
+    z-index: 2
+    pointer-events: none
+
+@mixin interested-section__header
+    position: absolute
+    top: 14rem
+    left: 1.1rem
+    @extend %page-title
+
+@mixin interested-section__list
+    display: flex
+    align-items: stretch
+    margin: 0
+
+@mixin interested-section__list-item
+    height: 100vh
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-align: center
+    align-items: center
+    padding: 0 2.6rem
+    text-align: center
+    padding-bottom: 9rem
+    width: 25%
+    transition: background-color 0.5s linear
+
+    &:hover
+        background-color: #fff
+        transition: background-color 0.5s linear
+
+    &.siblling-hover
+        background-color: #fcfcfc
+        transition: background-color 0.5s linear
+
+@mixin interested-section__list-block
+    height: 26rem
+    overflow: hidden
+
+@mixin interested-section__block-text
+    height: 11.5rem
+    overflow: hidden
+
+@mixin interested-section__item-image
+    width: 12rem
+    margin: 0 auto
+    margin-bottom: 1.9rem
+    height: 11rem
+
+@mixin interested-section__item-title
+    font-size: 2.2rem
+    text-align: center
+    font-weight: 600
+    margin-bottom: 1rem
+    line-height: 1.1em
+
+@mixin interested-section__item-text
+    font-size: 1.6rem
+    letter-spacing: -0.04rem
+    line-height: 1.6em
+
+
+.interested-section
+    @include  interested-section
+
+    &__bg
+        @include interested-section__bg
+
+    &__block-text
+        @include interested-section__block-text
+
+    &__header
+        @include interested-section__header
+
+    &__list
+        @include interested-section__list
+    
+    &__list-item
+        @include interested-section__list-item
+
+    &__list-block
+        @include interested-section__list-block
+    
+    &__item-image
+        @include interested-section__item-image
+    
+    &__item-title
+        @include interested-section__item-title
+    
+    &__item-text 
+        @include interested-section__item-text
