@@ -3,31 +3,65 @@
 //----------------------------------
 @mixin navigation-panel
     padding-right: 10rem
-    padding-left: 21.6rem
+    padding-left: 11.6rem
     position: fixed
     width: 100%
     z-index: 2
+    text-align: center
 
-@mixin main-logo
-    display: inline-block
-    width: 34.2rem
-    position: relative
-    top: 4.5rem
-    margin-right: 7rem
-    vertical-align: top
+    @media #{$media-sm-down}
+        overflow: hidden
+        background: #fff
+        padding-bottom: 3rem
+        box-shadow: -4px 2px 63px -23px #009792
+        padding: 5.2rem 10rem 3rem 10rem
+        max-height: 5.2rem
+        transition: max-height .2s
+    
+    &_opened
+        @media #{$media-sm-down}
+            max-height: 1000px
+            transition: max-height .2s
+
+@mixin burger-btn
+    position: absolute
+    top: 2.7rem
+    left: 4.4rem
+    width: 4.5rem
+    cursor: pointer
+
+    @media #{$media-sm-up}
+        display: none
+
+@mixin burger-btn__item
+    height: 0.5rem
+    margin-bottom: 0.6rem
+    background-image: linear-gradient(to right, #009795, #00a97c)
 
 @mixin logo-page
     position: absolute
     top: 1rem
     left: 3.9rem
 
+    @media #{$media-sm-down}
+        left: 50%
+        transform: translateX(-50%)
+        top: 0.3rem
+        width: 7.4rem
+
 @mixin main-navigation
     display: inline-block
     margin-top: 2.6rem
 
+    @media #{$media-sm-down}
+        margin-top: 3.6rem
+
 @mixin main-navigation__item
     display: inline-block
     padding: 0 1.55rem
+
+    @media #{$media-sm-down}
+        display: block
 
     &_active,
     &:hover
@@ -41,7 +75,15 @@
             position: absolute
             top: -2.5rem
             left: 0
+            
+            @media #{$media-sm-down}
+                display: none
 
+.burger-btn
+    @include burger-btn
+
+.burger-btn__item
+    @include burger-btn__item
 
 @mixin main-navigation__link
     text-transform: uppercase
@@ -49,7 +91,7 @@
     font-weight: 500
     line-height: 2.2rem
     display: inline-block
-    font-size: 1.3rem
+    font-size: 1.4rem
     font-weight: 600
 
 @mixin main-navigation__link_active
@@ -57,40 +99,37 @@
 
 @mixin language-switcher
     position: absolute
-    top: 2.5rem
-    right: 6.2rem
+    top: 2.1rem
+    right: 4.4rem
     max-height: 3.9rem
     border: 1px solid #1f8fa0
     overflow: hidden
 
 @mixin language-switcher-hover
     overflow: initial
-    max-height: 100%
+    max-height: 1000px
 
 @mixin language-switcher__button
-    padding: 0 1.1rem
+    padding: 0 1rem
     background: transparent
-    line-height: 3.6rem
+    line-height: 3.8rem
     vertical-align: top
     color: #1f8fa0
-    font-weight: 500
-    font-size: 1.2rem
+    font-weight: 600
+    font-size: 1.4rem
     border-radius: 0
     outline: none
     border: none
+    cursor: pointer
 
 @mixin language-switcher__button_active
-    background: #1f8fa0
-    color: #fff
+    color: #333
 
 .navigation-panel
     @include navigation-panel
 
 .logo-page
     @include logo-page
-
-.main-logo
-    @include main-logo
 
 .main-navigation
     @include main-navigation

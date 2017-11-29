@@ -1,18 +1,24 @@
-@mixin hero-section__bg
-	left: -15rem
 
 @mixin hero-section__sub-header
-	font-size: 3.7rem
+	font-size: 3.9rem
 	font-weight: 600
 	letter-spacing: -0.1rem
-	margin-bottom: 1.4rem
+	margin-bottom: 1.6rem
+
+@mixin main-logo
+	display: inline-block
+	width: 34.2rem
+	position: relative
+	top: -12.4rem
+	left: -2.4rem
+	margin-bottom: 3rem
 
 @mixin hero-section__main-header
-	font-size: 7.54rem
+	font-size: 7.96rem
 	font-weight: 600
 	letter-spacing: -0.21rem
 	line-height: 8.3rem
-	margin-bottom: 7.6rem
+	margin-bottom: 7.1rem
 
 @mixin hero-section__button
 	margin-right: 1.1rem
@@ -23,9 +29,11 @@
 @mixin hero-section__button-group
 	margin-bottom: 1.4rem
 
+.main-logo
+	@include main-logo
+
 .hero-section__bg
 	@extend %section-bg
-	@include hero-section__bg
 
 .hero-section__sub-header
 	@include hero-section__sub-header

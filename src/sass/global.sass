@@ -118,16 +118,18 @@ input[type='number']
 
 // GRID
 .container
-	overflow: hidden
 	margin: 0 auto
 	max-width: 1440px
 	width: 100%
 	position: relative
 	z-index: 1
 
+	@media #{$media-uhd-up}
+		max-width: 1920px
+
 	@media #{$media-sm}
-		padding-left: 1rem
-		padding-right: 1rem
+		padding-left: 3rem
+		padding-right: 3rem
 		width: 100%
 
 .app-full-page
