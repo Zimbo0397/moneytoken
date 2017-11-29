@@ -1,0 +1,75 @@
+
+@mixin cash-section
+@mixin cash-section__content
+    background-image: url(../img/bg/cash-section__bg.jpg)
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    padding-right: 68rem
+    height: 63rem
+    padding-left: 16.8rem
+    padding-top: 13.1rem
+    line-height: 2.1em
+
+@mixin cash-section__title
+    font-size: 5.12rem
+    font-weight: 600
+    color: #fff
+    letter-spacing: -0.13rem
+    position: relative
+
+    &:before
+        content: ''
+        position: absolute
+        top: -3.9rem
+        left: 0
+        width: 9.6rem
+        height: 0.4rem
+        background-image: linear-gradient(to right, #1f8fa0, #63b86c 83%)
+
+@mixin cash-section__list
+    color: #fff
+    font-size: 2.9rem
+    margin-top: 3.3rem
+
+@mixin cash-section__list-item
+    padding-left: 4.1rem
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        top: 1.3rem
+        left: -0.5rem
+        height: 2.5rem
+        width: 2.5rem
+        background-image: url(../img/icons/card-list__icon.png)
+        background-position: 50% 50%
+        background-repeat: no-repeat
+
+@mixin cash-section__image
+    position: absolute
+    right: 2.7rem
+    top: 8.2rem
+
+@mixin cash-section__button
+    width: 23rem
+
+.cash-section
+    @include cash-section
+    
+    &__content
+        @include cash-section__content
+
+    &__title 
+        @include cash-section__title
+
+    &__list
+        @include cash-section__list
+
+    &__list-item 
+        @include cash-section__list-item
+
+    &__image
+        @include cash-section__image
+
+    &__button
+        @include cash-section__button
