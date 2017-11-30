@@ -1,9 +1,19 @@
+@mixin hero-section
+	@media #{$media-sm-down}
+		padding-top: 20rem
+
+	@media #{$media-ls-down}
+		padding-top: 14rem
 
 @mixin hero-section__sub-header
 	font-size: 3.9rem
 	font-weight: 600
 	letter-spacing: -0.1rem
 	margin-bottom: 1.6rem
+	
+	@media #{$media-ls-down}
+		font-size: 2.9rem
+		margin-bottom: 0.6rem
 
 @mixin main-logo
 	display: inline-block
@@ -13,6 +23,17 @@
 	left: -2.4rem
 	margin-bottom: 3rem
 
+	img
+		width: 100%
+
+	@media #{$media-md-down}
+		top: -3.4rem
+		left: 0
+
+	@media #{$media-ls-down}
+		top: 1rem
+		width: 20rem
+
 @mixin hero-section__main-header
 	font-size: 7.96rem
 	font-weight: 600
@@ -20,11 +41,25 @@
 	line-height: 8.3rem
 	margin-bottom: 7.1rem
 
+	@media #{$media-sm-down}
+		margin-bottom: 5.1rem
+
+	@media #{$media-ls-down}
+		font-size: 4.36rem
+		line-height: 5.3rem
+		margin-bottom: 2.1rem
+
 @mixin hero-section__button
 	margin-right: 1.1rem
+	
+	@media #{$media-ls-down}
+		padding-left: 1.1rem
 
 @mixin hero-section__button_image
 	margin-right: 5.1rem
+
+	@media #{$media-ls-down}
+		margin-right: 1.1rem
 
 @mixin hero-section__button-group
 	margin-bottom: 1.4rem
@@ -32,20 +67,23 @@
 .main-logo
 	@include main-logo
 
-.hero-section__bg
-	@extend %section-bg
+.hero-section
+	@include hero-section
 
-.hero-section__sub-header
-	@include hero-section__sub-header
+	&__bg
+		@extend %section-bg
 
-.hero-section__main-header
-	@include hero-section__main-header
+	&__sub-header
+		@include hero-section__sub-header
 
-.hero-section__button-group
-	@include hero-section__button-group
+	&__main-header
+		@include hero-section__main-header
 
-.hero-section__button
-	@include hero-section__button
+	&__button-group
+		@include hero-section__button-group
 
-	&_image
-		@include hero-section__button_image
+	&__button
+		@include hero-section__button
+
+		&_image
+			@include hero-section__button_image

@@ -4,6 +4,8 @@
 html
 	color: $color
 	font-size: 10px
+	@media #{$media-sm-plus-down}
+		font-size: 8px
 
 	@media #{$media-uhd-up}
 		font-size: 20px
@@ -126,10 +128,16 @@ input[type='number']
 
 	@media #{$media-uhd-up}
 		max-width: 1920px
+	
+	@media #{$media-md-down}
+		max-width: 1080px
+
+	@media #{$media-sm-plus-down}
+		max-width: 900px
 
 	@media #{$media-sm}
-		padding-left: 3rem
-		padding-right: 3rem
+		padding-left: 2rem
+		padding-right: 2rem
 		width: 100%
 
 .app-full-page
@@ -141,6 +149,10 @@ input[type='number']
 	position: relative
 	// TODO remove
 	border-bottom: 1px solid #daecec
+
+	@media #{$media-sm-down}
+		height: auto
+		padding: 7rem 0
 
 .section
 	&_white
@@ -160,6 +172,9 @@ input[type='number']
 
 	&_direction_end
 		align-items: flex-end
+
+	&_direction_start
+		align-items: flex-start
 
 	.bg-image
 		height: 100%

@@ -10,10 +10,23 @@
     max-width: 143rem
     margin: 0 auto
 
+    @media #{$media-xs-down}
+        max-width: 73rem
+
 @mixin team-section__person
     text-align: center
     margin-bottom: 4.4rem
     position: relative
+
+    // TODO media extend
+    @media #{$media-sm-down}
+        width: 25%
+
+    @media #{$media-xs-down}
+        width: 33.333%
+
+    @media #{$media-ls-down}
+        width: 50%
 
 @mixin team-section__person-plate
     position: absolute
@@ -31,7 +44,7 @@
     background-image: url(../img/icons/kedin__icon.svg)
     background-repeat: no-repeat
     background-size: 5rem
-    background-position: 50% 92.2%
+    background-position: 50% 95.2%
     opacity: 0
     transition: opacity 0.2s linear
 

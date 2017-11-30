@@ -1,3 +1,11 @@
+@mixin slider-section__slider
+    margin-top: 4rem
+
+    @media #{$media-sm-down}
+        max-width: 79rem
+        margin: 0 auto
+        margin-top: 4rem
+
 @mixin slider-section__image
     height: 43rem
     max-width: 97rem
@@ -5,6 +13,11 @@
     display: flex
     align-items: center
 
+    @media #{$media-xs-down}
+        height: 40rem
+
+    @media #{$media-ls-down}
+        height: 34rem
     img
         object-fit: initial
         height: auto
@@ -14,7 +27,8 @@
     font-weight: 600
     line-height: 1.67
     letter-spacing: -0.13rem
-    margin-bottom: 4rem
+    display: inline-block
+    vertical-align: top
 
 @mixin slider-section__title-small
     font-size: 1.6rem
@@ -23,10 +37,25 @@
     text-align: left
     color: #333333
     font-weight: 400
+    display: inline-block
+    vertical-align: top
+    margin-top: 4rem
+    margin-left: 1rem
+
+    @media #{$media-xs-down}
+        max-width: 35rem
+
+    @media #{$media-ls-down}
+        display: block
+        margin-top: 0
 
 
 
 .slider-section
+
+    &__slider
+        @include slider-section__slider
+
     &__image
         @include slider-section__image
 

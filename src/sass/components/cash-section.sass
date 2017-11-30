@@ -1,14 +1,38 @@
 
 @mixin cash-section
+
 @mixin cash-section__content
     background-image: url(../img/bg/cash-section__bg.jpg)
     background-repeat: no-repeat
     background-position: 50% 50%
+    background-size: cover
     padding-right: 68rem
-    height: 63rem
+    min-height: 63rem
     padding-left: 16.8rem
     padding-top: 13.1rem
+    padding-bottom: 11.8rem
     line-height: 2.1em
+
+    @media #{$media-md-down}
+        padding-right: 43rem
+        padding-left: 9.8rem
+        padding-top: 11.1rem
+        padding-bottom: 3.9rem
+        min-height: 54.5rem
+
+    @media #{$media-sm-down}
+        padding-right: 33rem
+        padding-left: 5.8rem
+        padding-top: 10.1rem
+        min-height: 50.5rem
+
+    @media #{$media-xs-down}
+        padding-right: 21rem
+
+    @media #{$media-ls-down}
+        padding-right: 3rem
+        padding-left: 3rem
+        overflow: hidden
 
 @mixin cash-section__title
     font-size: 5.12rem
@@ -16,6 +40,13 @@
     color: #fff
     letter-spacing: -0.13rem
     position: relative
+
+    @media #{$media-ls-down}
+        font-size: 3.8rem
+        line-height: 1.4em
+
+    @media #{$media-xs-down}
+        max-width: 48rem
 
     &:before
         content: ''
@@ -31,9 +62,17 @@
     font-size: 2.9rem
     margin-top: 3.3rem
 
+    @media #{$media-ls-down}
+        font-size: 2.2rem
+        margin-top: 0.8rem
+
 @mixin cash-section__list-item
     padding-left: 4.1rem
     position: relative
+
+    @media #{$media-ls-down}
+        padding-left: 3.1rem
+
     &:before
         content: ''
         position: absolute
@@ -44,11 +83,45 @@
         background-image: url(../img/icons/card-list__icon.png)
         background-position: 50% 50%
         background-repeat: no-repeat
+        background-size: cover
+
+        @media #{$media-ls-down}
+            top: 1.8rem
+            height: 1.5rem
+            width: 1.5rem
 
 @mixin cash-section__image
     position: absolute
     right: 2.7rem
     top: 8.2rem
+    width: 72rem
+
+    @media #{$media-md-down}
+        right: -2.3rem
+        top: 16.2rem
+        width: 52rem
+
+    @media #{$media-sm-down}
+        right: 1.7rem
+        top: 20.2rem
+        width: 45rem
+
+    @media #{$media-xs-down}
+        width: 31rem
+
+    @media #{$media-ls-down}
+        position: relative
+        width: 32rem
+        top: 0
+        text-align: right
+        width: 100%
+        left: 4rem
+        margin-top: -1rem
+        height: 21rem
+
+    img
+        @media #{$media-ls-down}
+            max-width: 31rem
 
 @mixin cash-section__button
     width: 23rem

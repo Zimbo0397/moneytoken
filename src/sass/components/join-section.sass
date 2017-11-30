@@ -9,15 +9,29 @@
     font-weight: 600
     letter-spacing: -0.21rem
     line-height: 8.3rem
-    margin-bottom: 5.8rem
+    margin-bottom: 5.3rem
+
+    @media #{$media-sm-down}
+        font-size: 8rem
+        margin-bottom: 4rem
+
+    @media #{$media-xs-down}
+         font-size: 6rem
+         margin-bottom: 3rem
 
 @mixin join-section__socials-list
+
 @mixin join-section__socials-item
-    margin: 0 2.4rem
-    max-width: 4.2rem
-    min-width: 3.8rem
+    margin: 0.6px 1.8rem
+    max-width: 5.3rem
+    min-width: 5.3rem
     vertical-align: middle
     text-align: center
+
+    @media #{$media-sm-down}
+        margin: 0.6px 1.1rem
+        max-width: 4.3rem
+        min-width: 4.3rem
 
 @mixin join-section__info
     margin-top: 5.8rem
@@ -28,8 +42,15 @@
     letter-spacing: -0.08rem
     font-size: 3.13rem
 
+    @media #{$media-xs-down}
+        font-size: 2.53rem
+        margin-top: 3.8rem
+
 @mixin join-section__sign-up
     margin-top: 10rem
+
+    @media #{$media-xs-down}
+        margin-top: 6rem
 
 @mixin join-section__form-group
         width: 32rem

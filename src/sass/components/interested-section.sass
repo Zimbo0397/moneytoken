@@ -1,6 +1,12 @@
 @mixin interested-section
     background-color: #fcfcfc
 
+    @media #{$media-sm-down}
+        padding: 0
+
+    @media #{$media-ls-down}
+        padding: 10rem 0
+
 @mixin interested-section__bg
     position: relative
     z-index: 2
@@ -13,10 +19,23 @@
     left: 0
     @extend %page-title
 
+    @media #{$media-sm-down}
+        left: 2rem
+        top: 8rem
+
+    @media #{$media-ls-down}
+        position: static
+        margin-bottom: 4rem
+        text-align: center
+
 @mixin interested-section__list
     display: flex
     align-items: stretch
     margin: 0
+
+    @media #{$media-sm-down}
+        margin-top: 0
+        flex-flow: wrap
 
 @mixin interested-section__list-item
     height: 100vh
@@ -29,6 +48,31 @@
     padding-bottom: 9rem
     width: 25%
     transition: background-color 0.5s linear
+
+    @media #{$media-sm-down}
+        height: auto
+        width: 50%
+        padding: 3rem 2.6rem
+        flex-direction: column
+
+    @media #{$media-ls-down}
+        width: 100%
+
+    &:nth-child(-n+2)
+
+        @media #{$media-sm-down}
+            padding-top: 20rem
+
+        @media #{$media-ls-down}
+            padding-top: 3rem
+
+    &:nth-last-child(-n+2)
+
+        @media #{$media-sm-down}
+            padding-bottom: 20rem
+
+        @media #{$media-ls-down}
+            padding-bottom: 3rem
 
     &:hover
         background-color: #fff

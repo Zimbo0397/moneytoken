@@ -16,6 +16,9 @@
 	text-transform: uppercase
 	font-weight: 600
 
+	@media #{$media-ls-down}
+		font-size: 1.4rem
+
 	&_primer
 		background-image: linear-gradient(to right, #009795, #00a97c)
 		min-width: 14.4rem
@@ -29,6 +32,11 @@
 		padding-right: 3.9rem
 		background-position: 100% 0.5rem
 		background-repeat: no-repeat
+		background-size: 3.6rem
+
+		@media #{$media-ls-down}
+			background-size: 3rem
+			padding-right: 3.1rem
 
 	&_image_pdf
 		background-image: url('../img/icons/button_pdf.png')

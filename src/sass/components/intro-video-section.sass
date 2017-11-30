@@ -2,6 +2,11 @@
     height: 63rem
     position: relative
 
+    @media #{$media-md-down}
+        height: 47rem
+
+    @media #{$media-sm-down}
+        height: auto
     video
         height: 100%
         width: 100%
@@ -21,16 +26,30 @@
     min-width: 19.8rem
     border-radius: 3px
 
+    @media #{$media-ls-down}
+        font-size: 1.4rem
+        line-height: 5.1rem
+        padding-left: 5rem
+        min-width: 16.8rem
+
+
     &:before
         content: ''
         position: absolute
         top: 2.5rem
         left: 4rem
         height: 2rem
-        width: 2rem
+        width: 1.8rem
         background-image: url(../img/icons/video-button_play.png)
         background-repeat: no-repeat
         background-position: 50% 50%
+        background-size: cover
+
+        @media #{$media-ls-down}
+            top: 1.6rem
+            left: 2.4rem
+            height: 1.6rem
+            width: 1.4rem
 
 .intro-video-section
 

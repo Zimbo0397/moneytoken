@@ -4,11 +4,17 @@
     transform: translateY(-50%)
     width: 100%
     margin-top: 0 !important
+
+    @media #{$media-xs-down}
+        display: none
     
 .owl-theme .owl-dots
     position: absolute
     width: 100%
     bottom: -10.5rem
+
+    @media #{$media-sm-down}
+        bottom: -2rem
 
 .owl-theme .owl-nav [class*='owl-']
     height: 4.8rem
@@ -24,10 +30,16 @@
     background-image: url(../img/icons/arrow-left.svg) !important
     left: -3rem
 
+    @media #{$media-sm-down}
+        left: -7rem
+
 .owl-theme .owl-nav .owl-next
     float: right
     background-image: url(../img/icons/arrow-right.svg) !important
     right: -3rem
+
+    @media #{$media-sm-down}
+        right: -7rem
 
 .owl-theme .owl-dots .owl-dot
     vertical-align: middle
